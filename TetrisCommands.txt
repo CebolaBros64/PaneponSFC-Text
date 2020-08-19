@@ -1,0 +1,73 @@
+#GAME NAME:		Tetris Attack (USA) (En,Ja)
+
+#BLOCK NAME:		Menu Descriptions [Ja]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$37449
+#SCRIPT STOP:		$37865
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		Menu Descriptions [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$37866
+#SCRIPT STOP:		$37f06
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK
+
+#BLOCK NAME:		Character Bios [Ja]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CA768
+#SCRIPT STOP:		$CAE5B
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		Character Bios [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CAE5B
+#SCRIPT STOP:		$CB889
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Dialogue [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CB9AF
+#SCRIPT STOP:		$CC292
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Dialogue [Ja]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CC292
+#SCRIPT STOP:		$CC86C
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Ending [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CC292
+#SCRIPT STOP:		$CD4F7
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK
+
+#BLOCK NAME:		???? [Ja]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CD4FB
+#SCRIPT STOP:		$CDE51
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode - "Reset your console" [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CDE51
+#SCRIPT STOP:		$CDF8C
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK

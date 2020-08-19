@@ -1,0 +1,1 @@
+cartographer "Tetris Attack (USA) (En,Ja).sfc" TetrisCommands.txt output -s
