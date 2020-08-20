@@ -1,0 +1,1 @@
+cartographer "Panel de Pon (Japan) [Zuqkeo Patch].sfc" ZuqkeoCommands.txt "Output [Zuqkeo]" -s

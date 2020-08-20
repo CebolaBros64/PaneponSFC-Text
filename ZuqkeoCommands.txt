@@ -1,0 +1,91 @@
+#GAME NAME:		Panel de Pon (Japan) [Zuqkeo Patch]
+
+#BLOCK NAME:		VS. Mode Lose Quotes
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$109100
+#SCRIPT STOP:		$10925E
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		Stage Clear
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$1092A0
+#SCRIPT STOP:		$109A52
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		Character Bios
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$109B00
+#SCRIPT STOP:		$10A47E
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		Stage Clear Thanatos?
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10A500
+#SCRIPT STOP:		$10A591
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		Completion Messages (1)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10A600
+#SCRIPT STOP:		$10A6FB
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		Completion Messages (2)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10A717
+#SCRIPT STOP:		$10A98F
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Dialogue (1)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10AB00
+#SCRIPT STOP:		$10AC31
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Dialogue (2)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10AC36
+#SCRIPT STOP:		$10AE7C
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Dialogue (3)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10AEA0
+#SCRIPT STOP:		$10B1E9
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Dialogue (4)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10B200
+#SCRIPT STOP:		$10B266
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+#BLOCK NAME:		How to Play (1)
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$10B300
+#SCRIPT STOP:		$10B809
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
+
