@@ -1,5 +1,13 @@
 #GAME NAME:		Panel de Pon (Japan) [Zuqkeo Patch]
 
+#BLOCK NAME:		Main Menu
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$18000
+#SCRIPT STOP:		$1841D
+#TABLE:			Panel de Pon [Zuqkeo].tbl
+#END BLOCK
+
 #BLOCK NAME:		VS. Mode Lose Quotes
 #TYPE:			NORMAL
 #METHOD:		RAW
