@@ -71,3 +71,43 @@
 #SCRIPT STOP:		$CDF8C
 #TABLE:			Tetris Attack [En].tbl
 #END BLOCK
+
+#BLOCK NAME:		???? [Ja?]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CDF8C
+#SCRIPT STOP:		$CDFB7
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		???? [Ja]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CDFB7
+#SCRIPT STOP:		$CE0FE
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		VS. Mode Lose Quotes [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CE0FE
+#SCRIPT STOP:		$CE273
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK
+
+#BLOCK NAME:		Stage Clear Dialogue? [Ja]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CE2E8
+#SCRIPT STOP:		$CE799
+#TABLE:			Tetris Attack [Ja].tbl
+#END BLOCK
+
+#BLOCK NAME:		Stage Clear Dialogue [En]
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$CE799
+#SCRIPT STOP:		$CEF6F
+#TABLE:			Tetris Attack [En].tbl
+#END BLOCK
