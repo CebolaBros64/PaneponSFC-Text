@@ -1,0 +1,21 @@
+#Control codes begin at 0xC4
+$C8=<table>,1
+$D3=<unknown1>,3
+E0=<waitinput>
+E1=<sleep1>
+E2=<sleep2>
+E3=<sleep3>
+E4=<sleep4>
+E5=<sleep5>
+E6=<sleep6>
+$EF=<unknown2>,1
+F2= 
+$F4=<setspacewidth>,1
+F5=<clear>\n
+$F6=<indent>,1
+$F8=<textbox>,4
+$F9=<speed>,1
+$FB=<color>,1
+FD=\n
+FE=<playnextstep>
+FF=<END>\n\n
