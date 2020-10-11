@@ -20,5 +20,18 @@ with open(codeTBLPath, 'r', encoding='unicode_escape') as f:
     codeTBLFile = f.read()
 codeTBLDict = tbl2dict.convert(codeTBLFile)
 
+# Merge both dictionaries together
+TBLDict = charTBLDict.copy()
+
+#print(TBLDict == charTBLDict) --> True
+#TBLDict['peepee'] = 'poopoo'
+#print(TBLDict == charTBLDict) --> False
+
+TBLDict.update(codeTBLDict)
+
+# Profit
 #print(charmap_decode(binScript, 'strict', charTBLDict))
 #print(charmap_decode(binScript, 'strict', codeTBLDict))
+print(charmap_decode(binScript, 'strict', TBLDict))
+with open("butt.txt", "w") as f:
+    f.write(charmap_decode(binScript, 'strict', TBLDict)[0])
