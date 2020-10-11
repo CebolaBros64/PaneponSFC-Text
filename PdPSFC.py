@@ -11,12 +11,12 @@ with open(binPath, 'rb') as f:
     binScript = f.read()
 
 # Load character table file
-with open(charTBLPath, 'r', encoding='unicode_escape') as f:
+with open(charTBLPath, 'r') as f:
     charTBLFile = f.read()
 charTBLDict = tbl2dict.convert(charTBLFile)
 
 # Load control code table file
-with open(codeTBLPath, 'r', encoding='unicode_escape') as f:
+with open(codeTBLPath, 'r') as f:
     codeTBLFile = f.read()
 codeTBLDict = tbl2dict.convert(codeTBLFile)
 

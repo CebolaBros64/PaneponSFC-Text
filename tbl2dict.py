@@ -44,6 +44,8 @@ def convert(tbl):
             #entry2dict[bytes.fromhex(entry[0])] = entry2dict[entry[0]] # same as before
             entry2dict[int(entry[0], 16)] = entry2dict[entry[0]] # same as before
             entry2dict.pop(entry[0])
+            # replace \\n by \n (pretty sure this is not good code practice but hey, it should work)
+            entry2dict[int(entry[0], 16)] = entry2dict[int(entry[0], 16)].replace('\\n', '\n')
             #pass
         
         # add entry to final dictionary
