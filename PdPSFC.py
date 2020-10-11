@@ -13,10 +13,12 @@ with open(binPath, 'rb') as f:
 # Load character table file
 with open(charTBLPath, 'r', encoding='unicode_escape') as f:
     charTBLFile = f.read()
+charTBLDict = tbl2dict.convert(charTBLFile)
 
 # Load control code table file
 with open(codeTBLPath, 'r', encoding='unicode_escape') as f:
     codeTBLFile = f.read()
+codeTBLDict = tbl2dict.convert(codeTBLFile)
 
-print(charmap_decode(binScript, 'strict', tbl2dict.convert(charTBLFile)))
-#print(charmap_decode(binScript, 'strict', tbl2dict.convert(codeTBLFile)))
+#print(charmap_decode(binScript, 'strict', charTBLDict))
+#print(charmap_decode(binScript, 'strict', codeTBLDict))
