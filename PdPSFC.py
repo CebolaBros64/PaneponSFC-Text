@@ -1,8 +1,11 @@
 from codecs import charmap_decode
 import tbl2dict
 
-with open("test.bin", 'rb') as f:
-    test = f.read()
+binPath = 'test.bin'
+
+# Load binary containing text script
+with open(binPath, 'rb') as f:
+    binScript = f.read()
 
 filepath = 'Tetris Attack.tbl'
 
@@ -10,4 +13,4 @@ filepath = 'Tetris Attack.tbl'
 with open(filepath, 'r', encoding='unicode_escape') as f:
     tblFile = f.read()
 
-print(charmap_decode(test, 'strict', tbl2dict.convert(tblFile)))
+print(charmap_decode(binScript, 'strict', tbl2dict.convert(tblFile)))
