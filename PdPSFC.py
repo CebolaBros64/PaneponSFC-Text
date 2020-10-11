@@ -33,5 +33,5 @@ TBLDict.update(codeTBLDict)
 #print(charmap_decode(binScript, 'strict', charTBLDict))
 #print(charmap_decode(binScript, 'strict', codeTBLDict))
 print(charmap_decode(binScript, 'strict', TBLDict))
-with open("butt.txt", "w") as f:
+with open("[butt].txt", "w") as f:
     f.write(charmap_decode(binScript, 'strict', TBLDict)[0])
