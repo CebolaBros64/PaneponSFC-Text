@@ -13,8 +13,8 @@ def offset_encoding(_dict, n):
         #print(entry)
         offsetDict[entry-offset] = _dict[entry]
     
-    print(_dict)
-    print(offsetDict)
+    #print(_dict)
+    #print(offsetDict)
     return offsetDict
     
 def dict_merge(a, b):
@@ -43,21 +43,24 @@ TBLDict = dict_merge(charTBLDict, codeTBLDict)
 #print(charmap_decode(binScript, 'strict', charTBLDict))
 #print(charmap_decode(binScript, 'strict', codeTBLDict)) 
 #print(charmap_decode(binScript, 'strict', TBLDict))
-#with open("[butt].txt", "w") as f:
-#    f.write(charmap_decode(binScript, 'strict', TBLDict)[0])
 
-#i = 0
-#_str = ''
-#try:
-#    while True:
-#    if binScript[i]
-#    
-#        print(_str)
-#        _str += TBLDict[binScript[i]]
-#        i += 1
-#except IndexError:
-#    print("Reached end of file")
-#    print(_str)
+i = 0
+_str = ''
+tempTBLDict = TBLDict.copy()
+try:
+    while True:
+        if binScript[i] == 0xC8: # 0xC8 = <table>;
+            offsetTBLDict = offset_encoding(charTBLDict, binScript[i+1])
+            tempTBLDict = dict_merge(offsetTBLDict, codeTBLDict)
+    
+        #print(_str)
+        _str += tempTBLDict[binScript[i]]
+        i += 1
+except IndexError:
+    print("Reached end of file")
+    print(_str)
    
-
+with open("[butt].txt", "w") as f:
+    f.write(_str)
+    
 #offset_encoding(TBLDict, 1)
