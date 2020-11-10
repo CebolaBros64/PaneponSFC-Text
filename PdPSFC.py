@@ -15,7 +15,13 @@ def offset_encoding(_dict, n):
     
     print(_dict)
     print(offsetDict)
-    #return offsetDict
+    return offsetDict
+    
+def dict_merge(a, b):
+    '''Merges two dictionaries together'''
+    finalDict = a.copy()
+    finalDict.update(b)
+    return finalDict
 
 # Load binary containing text script
 with open(binPath, 'rb') as f:
@@ -31,9 +37,7 @@ with open(codeTBLPath, 'r') as f:
     codeTBLFile = f.read()
 codeTBLDict = tbl2dict.convert(codeTBLFile)
 
-# Merge both dictionaries together
-TBLDict = charTBLDict.copy()
-TBLDict.update(codeTBLDict)
+TBLDict = dict_merge(charTBLDict, codeTBLDict)
 
 # Profit
 #print(charmap_decode(binScript, 'strict', charTBLDict))
@@ -54,6 +58,6 @@ TBLDict.update(codeTBLDict)
 #except IndexError:
 #    print("Reached end of file")
 #    print(_str)
-#   
+   
 
-offset_encoding(TBLDict, 1)
+#offset_encoding(TBLDict, 1)
