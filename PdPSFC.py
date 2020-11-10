@@ -22,6 +22,23 @@ def dict_merge(a, b):
     finalDict = a.copy()
     finalDict.update(b)
     return finalDict
+    
+def decode_binary(_bin):
+    i = 0
+    _str = ''
+    tempTBLDict = TBLDict.copy()
+    try:
+        while True:
+            if _bin[i] == 0xC8: # 0xC8 = <table>;
+                offsetTBLDict = offset_encoding(charTBLDict, _bin[i+1])
+                tempTBLDict = dict_merge(offsetTBLDict, codeTBLDict)
+        
+            #print(_str)
+            _str += tempTBLDict[_bin[i]]
+            i += 1
+    except IndexError:
+        #print("Reached end of file")
+        return(_str)
 
 # Load binary containing text script
 with open(binPath, 'rb') as f:
@@ -43,24 +60,8 @@ TBLDict = dict_merge(charTBLDict, codeTBLDict)
 #print(charmap_decode(binScript, 'strict', charTBLDict))
 #print(charmap_decode(binScript, 'strict', codeTBLDict)) 
 #print(charmap_decode(binScript, 'strict', TBLDict))
-
-i = 0
-_str = ''
-tempTBLDict = TBLDict.copy()
-try:
-    while True:
-        if binScript[i] == 0xC8: # 0xC8 = <table>;
-            offsetTBLDict = offset_encoding(charTBLDict, binScript[i+1])
-            tempTBLDict = dict_merge(offsetTBLDict, codeTBLDict)
-    
-        #print(_str)
-        _str += tempTBLDict[binScript[i]]
-        i += 1
-except IndexError:
-    print("Reached end of file")
-    print(_str)
    
 with open("[butt].txt", "w") as f:
-    f.write(_str)
+    f.write(decode_binary(binScript))
     
 #offset_encoding(TBLDict, 1)
