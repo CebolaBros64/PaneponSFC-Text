@@ -7,14 +7,12 @@ charTBLPath = 'Tetris Attack.tbl'
 codeTBLPath = 'Tetris Attack [Control Codes].tbl'
 
 def offset_encoding(_dict, n):
+    '''Offsets the keys of a dictionary by (entry-(n*16))'''
     offsetDict = _dict.copy()
     offset = n * 16
     for entry in _dict:
-        #print(entry)
         offsetDict[entry-offset] = _dict[entry]
     
-    #print(_dict)
-    #print(offsetDict)
     return offsetDict
     
 def dict_merge(a, b):
@@ -24,6 +22,7 @@ def dict_merge(a, b):
     return finalDict
     
 def decode_binary(_bin):
+    '''Handles decoding of the binary into text'''
     i = 0
     _str = ''
     tempTBLDict = TBLDict.copy()
@@ -57,11 +56,9 @@ codeTBLDict = tbl2dict.convert(codeTBLFile)
 TBLDict = dict_merge(charTBLDict, codeTBLDict)
 
 # Profit
-#print(charmap_decode(binScript, 'strict', charTBLDict))
-#print(charmap_decode(binScript, 'strict', codeTBLDict)) 
+
 #print(charmap_decode(binScript, 'strict', TBLDict))
-   
+#offset_encoding(TBLDict, 1) 
+
 with open("[butt].txt", "w") as f:
     f.write(decode_binary(binScript))
-    
-#offset_encoding(TBLDict, 1)
