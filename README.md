@@ -10,10 +10,10 @@ I have no experience with Japanese, so Panel de Pon is specially tricky for me.
 ### Tetris Attack
 (should also apply to Yoshi no Panepon, same game)
  * Tetris Attack.tbl
-   * Missing some characters. Was once seperated into English and Japanese, before the encoding format was fully figured out.
+   * Missing some characters (mostly Japanese). Was once seperated into English and Japanese, before the encoding format was fully figured out.
 
 ## TO-DO
 * Figure out the pointer tables for both games. (Help needed)
 * ~Figure out abcde and Atlas.~ (Not using them anymore; instead I'm writing my own tool)
-* Japanese character tables for both games.
-* ~Update "Usage" section of this README.~ (Removed for now)
+* Japanese character tables for both games. (TA is a WIP. Haven't touched PdP yet, but I'd assume it's pretty similar)
+* ~Update "Usage" section of this README.~ (Removed for now; perhaps it should be moved to a Wiki page?)
