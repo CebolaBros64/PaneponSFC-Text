@@ -1,4 +1,4 @@
-import tbl2dict
+import tbl
 
 binPath = 'test.bin'
 charTBLPath = 'Tetris Attack.tbl'
@@ -49,12 +49,12 @@ if __name__ == "__main__":
     # Load character table file
     with open(charTBLPath, 'r', encoding='UTF-8') as f:
         charTBLFile = f.read()
-    charTBLDict = tbl2dict.convert(charTBLFile)
+    charTBLDict = tbl.convert(charTBLFile)
 
     # Load control code table file
     with open(codeTBLPath, 'r') as f:
         codeTBLFile = f.read()
-    codeTBLDict = tbl2dict.convert(codeTBLFile)
+    codeTBLDict = tbl.convert(codeTBLFile)
 
     TBLDict = dict_merge(charTBLDict, codeTBLDict)
 
