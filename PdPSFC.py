@@ -1,4 +1,5 @@
 import tbl
+import cmd
 
 binPath = 'test.bin'
 charTBLPath = 'Tetris Attack.tbl'
@@ -52,7 +53,7 @@ if __name__ == "__main__":
     charTBLDict = tbl.convert(charTBLFile)
 
     # Load control code table file
-    with open(codeTBLPath, 'r') as f:
+    with open(codeTBLPath, 'r', encoding='UTF-8') as f:
         codeTBLFile = f.read()
     codeTBLDict = tbl.convert(codeTBLFile)
 
