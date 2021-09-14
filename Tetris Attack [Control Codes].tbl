@@ -1,4 +1,4 @@
-; Control codes begin at 0xC4
+# Control codes start at 0xC4
 $C4=<unknown3>,4
 $C8=<table>,1
 $D3=<unknown1>,3
