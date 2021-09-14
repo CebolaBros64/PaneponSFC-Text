@@ -1,5 +1,8 @@
 *.bin
 
+### PyCharm ###
+.idea/
+
 ### Cartographer ###
 readme.txt
 output.txt
