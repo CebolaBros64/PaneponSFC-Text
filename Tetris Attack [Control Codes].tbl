@@ -1,4 +1,4 @@
-#Control codes begin at 0xC4
+# Control codes start at 0xC4
 $C4=<unknown3>,4
 $C8=<table>,1
 $D3=<unknown1>,3
@@ -10,6 +10,7 @@ E4=<sleep4>
 E5=<sleep5>
 E6=<sleep6>
 $EF=<unknown2>,1
+F1= 
 F2= 
 $F4=<setspacewidth>,1
 F5=<clear>\n
