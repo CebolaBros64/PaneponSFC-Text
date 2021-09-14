@@ -45,7 +45,7 @@ def convert(cmd):
                 block[command_regex.group(1)] = arg
 
         else:  # If a colon is not found: ("#END BLOCK")
-            _dict['BLOCKS'].append(block)
+            _dict['BLOCKS'].append(block.copy())
 
     return _dict
 
