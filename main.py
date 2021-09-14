@@ -1,7 +1,7 @@
 import tbl
 import cmd
 
-binPath = 'test.bin'
+binPath = 'Tetris Attack (USA) (En,Ja).sfc'
 charTBLPath = 'Tetris Attack.tbl'
 codeTBLPath = 'Tetris Attack [Control Codes].tbl'
 
@@ -43,6 +43,10 @@ def decode_binary(_bin):
 
 
 if __name__ == "__main__":
+    # Load commands file
+    with open('TetrisCommands.txt', 'r') as f:
+        commands = cmd.convert(f.read())
+
     # Load binary containing text script
     with open(binPath, 'rb') as f:
         binScript = f.read()
@@ -61,4 +65,10 @@ if __name__ == "__main__":
 
     # Profit
     with open("[butt].txt", "w", encoding='UTF-8') as f:
-        f.write(decode_binary(binScript))
+        for block in commands['BLOCKS']:
+            # print(block)
+            f.write(f'### {block["BLOCK NAME"]} ###\n')
+            stOffset = block['SCRIPT START']
+            edOffset = block['SCRIPT STOP']
+
+            f.write(decode_binary(binScript[stOffset:edOffset]))
