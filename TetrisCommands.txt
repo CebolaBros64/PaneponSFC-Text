@@ -72,14 +72,6 @@
 #TABLE:			Tetris Attack [En].tbl
 #END BLOCK
 
-#BLOCK NAME:		???? [Ja?]
-#TYPE:			NORMAL
-#METHOD:		RAW
-#SCRIPT START:		$CDF8C
-#SCRIPT STOP:		$CDFB7
-#TABLE:			Tetris Attack [Ja].tbl
-#END BLOCK
-
 #BLOCK NAME:		???? [Ja]
 #TYPE:			NORMAL
 #METHOD:		RAW
