@@ -1,23 +1,5 @@
 import re
 
-test_cmd = """#GAME NAME:		Game Name Goes Here
-
-#BLOCK NAME:		This is a text block
-#TYPE:			NORMAL
-#METHOD:		RAW
-#SCRIPT START:		$B0B0
-#SCRIPT STOP:		$BEEF
-#TABLE:			SHIFT-JIS.tbl
-#END BLOCK
-
-#BLOCK NAME:		This is another text block
-#TYPE:			NORMAL
-#METHOD:		RAW
-#SCRIPT START:		$DEAD
-#SCRIPT STOP:		$FFFF
-#TABLE:			SHIFT-JIS.tbl
-#END BLOCK"""
-
 
 def convert(cmd):
     lines = re.findall(r"#(.+)", cmd)
@@ -51,5 +33,23 @@ def convert(cmd):
 
 
 if __name__ == "__main__":
+    test_cmd = """#GAME NAME:		Game Name Goes Here
+    
+    #BLOCK NAME:		This is a text block
+    #TYPE:			NORMAL
+    #METHOD:		RAW
+    #SCRIPT START:		$B0B0
+    #SCRIPT STOP:		$BEEF
+    #TABLE:			SHIFT-JIS.tbl
+    #END BLOCK
+    
+    #BLOCK NAME:		This is another text block
+    #TYPE:			NORMAL
+    #METHOD:		RAW
+    #SCRIPT START:		$DEAD
+    #SCRIPT STOP:		$FFFF
+    #TABLE:			SHIFT-JIS.tbl
+    #END BLOCK"""
+
     from pprint import pprint
     pprint(convert(test_cmd), sort_dicts=False)
