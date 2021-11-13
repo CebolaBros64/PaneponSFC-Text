@@ -1,9 +1,15 @@
 import tbl
 import cmd
 
-binPath = 'Tetris Attack (USA) (En,Ja).sfc'
-charTBLPath = 'Tetris Attack.tbl'
-codeTBLPath = 'Tetris Attack [Control Codes].tbl'
+# binPath = 'Tetris Attack (USA) (En,Ja).sfc'
+# charTBLPath = 'Tetris Attack.tbl'
+# codeTBLPath = 'Tetris Attack [Control Codes].tbl'
+# commandsPath = 'TetrisCommands.txt'
+
+binPath = 'Panel de Pon (World) (Ja) (Rev 1) (Virtual Console, Switch Online).sfc'
+charTBLPath = 'Panel de Pon.tbl'
+codeTBLPath = 'Panel de Pon [Control Codes].tbl'
+commandsPath = 'PaneponCommands.txt'
 
 
 def offset_encoding(_dict, n):
@@ -23,19 +29,31 @@ def dict_merge(a, b):
     return final_dict
 
 
-def decode_binary(_bin):
+def decode_binary(_bin, TBLShftCtrl, ctrlTBLDict):
     """Handles decoding of the binary into text"""
+    argcount = 0
     i = 0
     _str = ''
     temp_tbl_dict = TBLDict.copy()
     try:
         while True:
-            if _bin[i] == 0xC8:  # 0xC8 = <table>;
-                offset_tbl_dict = offset_encoding(charTBLDict, _bin[i + 1])
-                temp_tbl_dict = dict_merge(offset_tbl_dict, codeTBLDict)
+            if _bin[i] in ctrlTBLDict:
+
+                if _bin[i] == TBLShftCtrl:  # 0xC8 = <table>;
+                    offset_tbl_dict = offset_encoding(charTBLDict, _bin[i + 1])
+                    temp_tbl_dict = dict_merge(offset_tbl_dict, codeTBLDict)
 
             # print(_str)
-            _str += temp_tbl_dict[_bin[i]]
+
+            if argcount > 0:
+                _str += f"<{_bin[i]:02x}>"
+                argcount -= 1
+            else:
+                _str += temp_tbl_dict[_bin[i]]['value']
+
+            if _bin[i] in temp_tbl_dict and 'args' in temp_tbl_dict[_bin[i]]:
+                argcount = temp_tbl_dict[_bin[i]]['args']
+
             i += 1
     except IndexError:
         # print("Reached end of file")
@@ -44,7 +62,7 @@ def decode_binary(_bin):
 
 if __name__ == "__main__":
     # Load commands file
-    with open('TetrisCommands.txt', 'r') as f:
+    with open(commandsPath, 'r') as f:
         commands = cmd.convert(f.read())
 
     # Load binary containing text script
@@ -63,6 +81,11 @@ if __name__ == "__main__":
 
     TBLDict = dict_merge(charTBLDict, codeTBLDict)
 
+    # Find <table> in the control code table file and assign
+    # it to variable tblCtrl
+    # https://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
+    TBLCtrl = list(codeTBLDict.keys())[list(codeTBLDict.values()).index({'value':'<table>', 'args': 1})]
+
     # Profit
     with open("[butt].txt", "w", encoding='UTF-8') as f:
         for block in commands['BLOCKS']:
@@ -71,4 +94,4 @@ if __name__ == "__main__":
             stOffset = block['SCRIPT START']
             edOffset = block['SCRIPT STOP']
 
-            f.write(decode_binary(binScript[stOffset:edOffset]))
+            f.write(decode_binary(binScript[stOffset:edOffset], TBLCtrl, codeTBLDict))
