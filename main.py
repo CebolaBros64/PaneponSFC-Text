@@ -1,9 +1,9 @@
 import tbl
 import cmd
+import argparse
 
-binPath = 'Tetris Attack (USA) (En,Ja).sfc'
-charTBLPath = 'Tetris Attack.tbl'
-codeTBLPath = 'Tetris Attack [Control Codes].tbl'
+progName = 'PaneponSFC-Text'
+progDesc = 'Text editing utilities for the SNES Panel de Pon games.'
 
 
 def offset_encoding(_dict, n):
@@ -43,21 +43,41 @@ def decode_binary(_bin):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(prog=progName, description=progDesc)
+    parser.add_argument('bin',
+                        metavar='rom',
+                        nargs=1,
+                        help='SNES Game ROM')
+    parser.add_argument('cmd',
+                        metavar='commands',
+                        nargs=1,
+                        help='Commands file')
+    parser.add_argument('tbl',
+                        metavar='char_tbl',
+                        nargs=1,
+                        help='Character table')
+    parser.add_argument('tblc',
+                        metavar='code_tbl',
+                        nargs=1,
+                        help='Control code table')
+
+    args = parser.parse_args()
+
     # Load commands file
-    with open('TetrisCommands.txt', 'r') as f:
+    with open(args.cmd[0], 'r') as f:
         commands = cmd.convert(f.read())
 
     # Load binary containing text script
-    with open(binPath, 'rb') as f:
+    with open(args.bin[0], 'rb') as f:
         binScript = f.read()
 
     # Load character table file
-    with open(charTBLPath, 'r', encoding='UTF-8') as f:
+    with open(args.tbl[0], 'r', encoding='UTF-8') as f:
         charTBLFile = f.read()
     charTBLDict = tbl.convert(charTBLFile)
 
     # Load control code table file
-    with open(codeTBLPath, 'r', encoding='UTF-8') as f:
+    with open(args.tblc[0], 'r', encoding='UTF-8') as f:
         codeTBLFile = f.read()
     codeTBLDict = tbl.convert(codeTBLFile)
 
