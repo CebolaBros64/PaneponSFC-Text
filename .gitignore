@@ -6,7 +6,7 @@
 ### Cartographer ###
 readme.txt
 output.txt
-*].txt
+*\].txt
 cartographer.exe
 
 ### SNES ROM ###
@@ -151,3 +151,4 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+/Panel de Pon - old.tbl

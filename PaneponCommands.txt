@@ -1,0 +1,17 @@
+#GAME NAME:		Panel de Pon (World) (Ja) (Rev 1) (Virtual Console, Switch Online)
+
+#BLOCK NAME:		Menu Descriptions
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$18000
+#SCRIPT STOP:		$18505
+#TABLE:			Panel de Pon.tbl
+#END BLOCK
+
+#BLOCK NAME:		Character Bios
+#TYPE:			NORMAL
+#METHOD:		RAW
+#SCRIPT START:		$51637
+#SCRIPT STOP:		$51DCD
+#TABLE:			Panel de Pon.tbl
+#END BLOCK

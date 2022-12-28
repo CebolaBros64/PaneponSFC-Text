@@ -1,0 +1,13 @@
+$F1=<unknown1>,3
+$F2=<unknown2>,3
+$F3=<speed>,1
+F4=\n
+F5=<clear>
+$F6=<table>,1
+F7=<sleep1>
+F8=<sleep2>
+F9=<sleep3>
+$FA=<textbox>,4
+$FC=<indent>,1
+$FE=<color>,2
+FF=<END>\n\n
