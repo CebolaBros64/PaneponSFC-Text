@@ -45,8 +45,8 @@ def decode_binary(_bin, TBLShftCtrl, ctrlTBLDict):
             else:
                 _str += temp_tbl_dict[_bin[i]]['value']
 
-            if _bin[i] in temp_tbl_dict and 'args' in temp_tbl_dict[_bin[i]]:
-                argcount = temp_tbl_dict[_bin[i]]['args']
+                if _bin[i] in temp_tbl_dict and 'args' in temp_tbl_dict[_bin[i]]:
+                    argcount = temp_tbl_dict[_bin[i]]['args']
 
             i += 1
     except IndexError:
