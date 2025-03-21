@@ -1,3 +1,5 @@
+> This repo is old. Please refer to [thanatools](https://www.github.com/CebolaBros64/thanatools) for a (hopefully) more compreheensible codebase
+
 Resources meant for modifying the text in the SFC/SNES games *Panel de Pon* and *Tetris Attack*.
 
 ## Status
